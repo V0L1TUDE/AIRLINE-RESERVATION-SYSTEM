@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">SkyWay ARS</a>
+            <div class="links">
+                <a class="active" href="index.html">Dashboard</a>
+                <a href="flights.html">Flights</a>
+                <a href="add-flight.html">Add Flight</a>
+                <a href="booking.html">Booking</a>
+                <a href="reservations.html">Reservations</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Airline Reservation System</h1>
+            <p>Static project frontend connected to the same sample entities used in the DBMS scripts.</p>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <div class="metric" id="totalFlights">0</div>
+                <strong>Scheduled Flights</strong>
+            </article>
+            <article class="card">
+                <div class="metric" id="confirmedBookings">0</div>
+                <strong>Confirmed Bookings</strong>
+            </article>
+            <article class="card">
+                <div class="metric" id="totalRevenue">0</div>
+                <strong>Total Revenue</strong>
+            </article>
+            <article class="card">
+                <div class="metric" id="occupancyRate">0%</div>
+                <strong>Overall Occupancy</strong>
+            </article>
+        </section>
+
+        <p class="footer-note">Use the navigation to search flights, book a ticket, and view or cancel reservations.</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

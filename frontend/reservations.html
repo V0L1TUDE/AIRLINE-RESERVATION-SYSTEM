@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Airline Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">SkyWay ARS</a>
+            <div class="links">
+                <a href="index.html">Dashboard</a>
+                <a href="flights.html">Flights</a>
+                <a href="add-flight.html">Add Flight</a>
+                <a href="booking.html">Booking</a>
+                <a class="active" href="reservations.html">Reservations</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Reservations</h1>
+            <p>Review bookings and cancel reservations through the backend API.</p>
+        </section>
+
+        <section class="toolbar">
+            <button id="loadReservationsButton" type="button">Load Reservations</button>
+        </section>
+
+        <p class="status-line info" id="reservationsStatus">Reservation data is ready to load.</p>
+
+        <section class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Passenger</th>
+                        <th>Email</th>
+                        <th>Flight</th>
+                        <th>Route</th>
+                        <th>Class</th>
+                        <th>Seat</th>
+                        <th>Fare</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="reservationsBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

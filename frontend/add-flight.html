@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Flight - Airline Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">SkyWay ARS</a>
+            <div class="links">
+                <a href="index.html">Dashboard</a>
+                <a href="flights.html">Flights</a>
+                <a class="active" href="add-flight.html">Add Flight</a>
+                <a href="booking.html">Booking</a>
+                <a href="reservations.html">Reservations</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Add Flight</h1>
+            <p>Create a new flight, schedule, and seats in the Oracle database.</p>
+        </section>
+
+        <form class="form-panel" id="addFlightForm">
+            <div id="addFlightMessage" class="message"></div>
+            <div class="form-grid">
+                <label>
+                    Flight Number
+                    <input name="flightNumber" type="text" required placeholder="SW512">
+                </label>
+                <label>
+                    Airline Name
+                    <input name="airlineName" type="text" required value="SkyWay Airlines">
+                </label>
+                <label>
+                    Source City
+                    <input name="sourceCity" type="text" required placeholder="Pune">
+                </label>
+                <label>
+                    Destination City
+                    <input name="destinationCity" type="text" required placeholder="Goa">
+                </label>
+                <label>
+                    Base Fare
+                    <input name="baseFare" type="number" min="1" required placeholder="3600">
+                </label>
+                <label>
+                    Aircraft Type
+                    <input name="aircraftType" type="text" required placeholder="Airbus A320">
+                </label>
+                <label>
+                    Departure Time
+                    <input name="departureTime" type="datetime-local" required>
+                </label>
+                <label>
+                    Arrival Time
+                    <input name="arrivalTime" type="datetime-local" required>
+                </label>
+                <label>
+                    Business Seats
+                    <input name="businessSeats" type="number" min="0" required value="2">
+                </label>
+                <label>
+                    Economy Seats
+                    <input name="economySeats" type="number" min="0" required value="4">
+                </label>
+            </div>
+            <button type="submit">Add Flight</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

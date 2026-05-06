@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket - Airline Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">SkyWay ARS</a>
+            <div class="links">
+                <a href="index.html">Dashboard</a>
+                <a href="flights.html">Flights</a>
+                <a href="add-flight.html">Add Flight</a>
+                <a class="active" href="booking.html">Booking</a>
+                <a href="reservations.html">Reservations</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Book Ticket</h1>
+            <p>Create a reservation through the backend API.</p>
+        </section>
+
+        <form class="form-panel" id="bookingForm">
+            <div id="formMessage" class="message"></div>
+            <div class="form-grid">
+                <label>
+                    Passenger ID
+                    <input name="passengerId" type="number" required placeholder="4">
+                </label>
+                <label>
+                    Passenger Name
+                    <input name="passengerName" type="text" required placeholder="Naina Kapoor">
+                </label>
+                <label>
+                    Email
+                    <input name="email" type="email" required placeholder="naina@example.com">
+                </label>
+                <label>
+                    Flight
+                    <select name="scheduleId" id="scheduleId" required></select>
+                </label>
+                <label>
+                    Travel Class
+                    <select name="travelClass" required>
+                        <option>Economy</option>
+                        <option>Business</option>
+                    </select>
+                </label>
+                <label>
+                    Payment Method
+                    <select name="paymentMethod" required>
+                        <option>Credit Card</option>
+                        <option>Debit Card</option>
+                        <option>UPI</option>
+                        <option>Net Banking</option>
+                        <option>Cash</option>
+                    </select>
+                </label>
+            </div>
+            <button type="submit">Book Ticket</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

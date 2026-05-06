@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights - Airline Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <nav class="nav">
+            <a class="brand" href="index.html">SkyWay ARS</a>
+            <div class="links">
+                <a href="index.html">Dashboard</a>
+                <a class="active" href="flights.html">Flights</a>
+                <a href="add-flight.html">Add Flight</a>
+                <a href="booking.html">Booking</a>
+                <a href="reservations.html">Reservations</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1>Flight Search</h1>
+            <p>Filter available scheduled flights by source and destination city.</p>
+        </section>
+
+        <section class="toolbar">
+            <label>
+                Source
+                <input id="sourceFilter" type="text" placeholder="Delhi">
+            </label>
+            <label>
+                Destination
+                <input id="destinationFilter" type="text" placeholder="Mumbai">
+            </label>
+            <button id="loadFlightsButton" type="button">Load Flights</button>
+        </section>
+
+        <p class="status-line info" id="flightsStatus">Flight data is ready to load.</p>
+
+        <section class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Schedule ID</th>
+                        <th>Flight</th>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Aircraft</th>
+                        <th>Available</th>
+                        <th>Occupancy</th>
+                        <th>Base Fare</th>
+                    </tr>
+                </thead>
+                <tbody id="flightsBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

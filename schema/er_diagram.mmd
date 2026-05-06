@@ -1,0 +1,58 @@
+erDiagram
+    PASSENGER ||--o{ RESERVATION : makes
+    FLIGHT ||--o{ SCHEDULE : has
+    SCHEDULE ||--o{ SEAT : contains
+    SCHEDULE ||--o{ RESERVATION : includes
+    SEAT ||--o| RESERVATION : assigned_to
+    RESERVATION ||--|| PAYMENT : paid_by
+
+    PASSENGER {
+        number passenger_id PK
+        varchar first_name
+        varchar last_name
+        varchar email UK
+        varchar phone
+        varchar passport_number UK
+    }
+
+    FLIGHT {
+        number flight_id PK
+        varchar flight_number UK
+        varchar source_city
+        varchar destination_city
+        number base_fare
+    }
+
+    SCHEDULE {
+        number schedule_id PK
+        number flight_id FK
+        timestamp departure_time
+        timestamp arrival_time
+        number total_seats
+        number available_seats
+    }
+
+    SEAT {
+        number seat_id PK
+        number schedule_id FK
+        varchar seat_number
+        varchar seat_class
+        varchar seat_status
+    }
+
+    RESERVATION {
+        number reservation_id PK
+        number passenger_id FK
+        number schedule_id FK
+        number seat_id FK
+        varchar reservation_status
+        number fare_amount
+    }
+
+    PAYMENT {
+        number payment_id PK
+        number reservation_id FK
+        number amount
+        varchar payment_method
+        varchar payment_status
+    }
